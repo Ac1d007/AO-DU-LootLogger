@@ -1,4 +1,5 @@
-﻿using LootLogger.Model;
+﻿using DSharpPlus.CommandsNext;
+using LootLogger.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace LootLogger
         void AddLootForPlayer(Loot loot, string playerName);
         void SaveLootsToFile();
 
-        void UploadLoots();
+        void GetLoots(CommandContext ctx);
 
     }
 }
