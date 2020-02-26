@@ -7,10 +7,11 @@
     <ProjectGuid>{1F2F66AF-844C-43D7-876F-C6398C9D150F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>LootLogger</RootNamespace>
-    <AssemblyName>LootLogger</AssemblyName>
+    <AssemblyName>Ares</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -32,8 +32,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>bin\Release\AresBot\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -70,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>LootLogger.AresLootBot</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tooschee-Water-Gaming-Spartan.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Discord.Net.Commands, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -208,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AresLootBot.cs" />
+    <Compile Include="Commands\StopTransmit.cs" />
     <Compile Include="Commands\TransmitLogs.cs" />
     <Compile Include="EventCodes.cs" />
     <Compile Include="ILootService.cs" />
@@ -258,6 +262,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tooschee-Water-Gaming-Spartan.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

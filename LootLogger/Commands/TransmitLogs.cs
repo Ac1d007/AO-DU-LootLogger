@@ -18,7 +18,7 @@ namespace LootLogger.Commands
         [Description("Command that starts the logs transmission")] // this will be displayed to tell users what this command does when they invoke help
         public async Task PostLogs(CommandContext ctx) {
 
-            Commands.LootLogger logger = null;
+            LootLogger logger = null;
             try
             {
                 logger = new LootLogger(ctx);
@@ -32,9 +32,7 @@ namespace LootLogger.Commands
                     {
                        logger.GetLoots();
                     };
-            }
-                
-                await Task.Delay(-1);
+                }
             }
             catch (Exception e)
             {
@@ -45,7 +43,6 @@ namespace LootLogger.Commands
     }
     public class LootLogger
     {
-
         private PacketHandler _eventHandler;
         private ILootService _lootService;
         private PhotonPacketHandler photonPacketHandler;

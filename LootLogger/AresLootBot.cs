@@ -14,7 +14,7 @@ using PcapDotNet.Packets;
 namespace LootLogger
 {
     public class AresLootBot {
-        private const string Token = "NjgwMDcwOTExNjM0MDQ2OTk2.XlUV9Q.3K6OKU0r1lqoOmHOzRpdYoeUQnI";
+        private const string Token = "NjgwMDcwOTExNjM0MDQ2OTk2.XlZILg.F5J8cc_uMNsRPPe9TJ-sSR-X3BQ";
         static DiscordClient discord;
         static CommandsNextModule commands;
 
@@ -42,12 +42,13 @@ namespace LootLogger
                
             });
             commands.RegisterCommands<TransmitLogs>();
-       
+            commands.RegisterCommands<StopTransmit>();
+
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
     }
 
-    
+   
 }
 
